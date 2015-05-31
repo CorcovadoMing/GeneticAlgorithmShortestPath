@@ -24,7 +24,7 @@ const std::vector<int> Graph::neighbors(const int node, const std::vector<int> &
     for (std::size_t i = 0; i < graph_[node].size(); i += 1)
     {
         if (graph_[node][i] && !isVisited[i])
-            neighbors.push_back(i);
+            neighbors.push_back((int)i);
     }
     return neighbors;
 }
