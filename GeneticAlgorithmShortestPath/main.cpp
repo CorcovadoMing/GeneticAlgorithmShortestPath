@@ -3,10 +3,12 @@
 
 int main(int argc, const char * argv[])
 {
-    if (argc != 2) return 0;
+    if (argc != 4) return 0;
     else
     {
         std::cout << argv[1] << std::endl;
+        std::cout << "src: " << argv[2] << std::endl;
+        std::cout << "dst: " << argv[3] << std::endl;
     }
     
     GeneticAlgorithm geneticAlgorithm(0.15);
