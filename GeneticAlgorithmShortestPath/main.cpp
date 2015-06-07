@@ -3,6 +3,12 @@
 
 int main(int argc, const char * argv[])
 {
+    if (argc != 2) return 0;
+    else
+    {
+        std::cout << argv[1] << std::endl;
+    }
+    
     GeneticAlgorithm geneticAlgorithm(0.15);
     geneticAlgorithm.setGraphSize(20);
     geneticAlgorithm.buildGraphWithFile("input.txt");

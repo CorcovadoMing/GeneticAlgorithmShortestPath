@@ -7,18 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>342F2EED-A291-41FB-928D-295C85203364</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>GeneticAlgorithmShortestPath</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>6ACC8DBEDF9899EF68EE7F020A2D3E06E6AAB07F</key>
 		<string>https://github.com/CorcovadoMing/GeneticAlgorithmShortestPath.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GeneticAlgorithmShortestPath/GeneticAlgorithmShortestPath.xcodeproj/project.xcworkspace</string>
+	<string>GeneticAlgorithmShortestPath.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6ACC8DBEDF9899EF68EE7F020A2D3E06E6AAB07F</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/CorcovadoMing/GeneticAlgorithmShortestPath.git</string>
