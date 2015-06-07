@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <iostream>
+#include <climits>
 #include "Solution.h"
 #include "Graph.h"
 
