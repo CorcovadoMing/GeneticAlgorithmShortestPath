@@ -141,6 +141,7 @@ void GeneticAlgorithm::mutation()
             const int mutation_point = RandomRange::random<int>(1, (int)solutions_[i].size() - 3);
             const int barrier = solutions_[i].gene(mutation_point + 1);
             solutions_[i].cutTailsFrom(mutation_point);
+            solutions_[i].pop_back();
             std::vector<int> new_tails;
             findPath(solutions_[i].gene(mutation_point), des_, graph_, new_tails, 1, barrier);
             solutions_[i].concatenateWith(new_tails);

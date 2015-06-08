@@ -17,7 +17,6 @@ int main(int argc, const char * argv[])
     else
     {
         raw_graph = argv[1];
-        raw_graph.erase(0, 8);
         
         Json::Value root;
         Json::Reader reader;
@@ -33,8 +32,9 @@ int main(int argc, const char * argv[])
             const Json::Value nodes = root["nodes"];
             const int graph_size = nodes.size();
             
-            GeneticAlgorithm geneticAlgorithm(0.15);
+            GeneticAlgorithm geneticAlgorithm(0.4);
             geneticAlgorithm.setGraphSize(graph_size);
+            
             
             const Json::Value links = root["links"];
             for (int i = 0; i < links.size(); i += 1)
@@ -42,8 +42,9 @@ int main(int argc, const char * argv[])
                 geneticAlgorithm.buildGraph(links[i]["source"].asInt(), links[i]["target"].asInt(), links[i]["weight"].asInt());
             }
             
-            geneticAlgorithm.goal(src, dst);
+            geneticAlgorithm.goal(src-1, dst-1);
             geneticAlgorithm.initial();
+            
             do
             {
                 geneticAlgorithm.selection();
@@ -51,7 +52,8 @@ int main(int argc, const char * argv[])
                 geneticAlgorithm.mutation();
             }
             while (geneticAlgorithm.notConverge());
-            std::cout << geneticAlgorithm.getSolution() << std::endl;
+            
+            std::cout << geneticAlgorithm.getSolution();
             
             return 0;
         }
