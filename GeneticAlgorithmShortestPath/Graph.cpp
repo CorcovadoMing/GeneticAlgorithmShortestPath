@@ -13,11 +13,6 @@ void Graph::build(const int from, const int to, const int weight)
     graph_[to][from] = weight;
 }
 
-void Graph::build(const int node, const int weight)
-{
-    graph_[node][node] = weight;
-}
-
 const std::vector<int> Graph::neighbors(const int node, const std::vector<int> &isVisited) const
 {
     std::vector<int> neighbors;
