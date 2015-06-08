@@ -18,9 +18,6 @@ int main(int argc, const char * argv[])
     {
         raw_graph = argv[1];
         raw_graph.erase(0, 8);
-        std::cout << "src: " << src << std::endl;
-        std::cout << "dst: " << dst << std::endl;
-    
         
         Json::Value root;
         Json::Reader reader;
@@ -54,7 +51,6 @@ int main(int argc, const char * argv[])
                 geneticAlgorithm.mutation();
             }
             while (geneticAlgorithm.notConverge());
-            geneticAlgorithm.printSolution();
             std::cout << geneticAlgorithm.getSolution() << std::endl;
             
             return 0;
